@@ -1,4 +1,4 @@
-# 파일명: generate_dummy_data.py (최종 완성본)
+# 파일명: generate_dummy_data.py (최종 찐 완성본)
 # 실행위치: C:\dev\agent\
 
 import pandas as pd
