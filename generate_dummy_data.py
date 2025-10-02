@@ -1,5 +1,7 @@
 # 파일명: generate_dummy_data.py (최종 찐 완성본)
 # 실행위치: C:\dev\agent\
+# 필요 파일: 없음 (실행 시 더미 데이터 2000명 규모 생성)
+# 목적: 모든 기능이 포함된 최종 데이터를 생성 (풀 컬럼, 페르
 
 import pandas as pd
 from faker import Faker
