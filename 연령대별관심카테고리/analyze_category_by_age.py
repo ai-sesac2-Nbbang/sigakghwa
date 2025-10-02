@@ -1,6 +1,7 @@
 # 파일명: analyze_category_by_age.py
 # 실행위치: C:\dev\agent\
 # 필요 파일: dummy_data_200_users.csv
+# 목적: 연령대별 선호 카테고리를 분석하고 누적 막대그래프로 시각화
 
 import pandas as pd
 import matplotlib.pyplot as plt

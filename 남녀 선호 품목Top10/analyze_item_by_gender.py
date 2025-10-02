@@ -1,6 +1,7 @@
 # 파일명: analyze_item_by_gender.py
 # 실행위치: C:\dev\agent\
 # 필요 파일: dummy_data_2000_users.csv, dummy_data_2000_posts.csv, dummy_data_2000_participations.csv
+# 목적: 성별에 따른 선호 아이템을 분석하고 시각화
 
 import pandas as pd
 import matplotlib.pyplot as plt

@@ -1,6 +1,7 @@
 # 파일명: analyze_map_clusters.py
 # 실행위치: C:\dev\agent\
 # 필요 파일: dummy_data_200_posts.csv
+# 목적: 활동 밀집 지역을 지도 위에 마커 클러스터로 시각화
 
 import pandas as pd
 import folium

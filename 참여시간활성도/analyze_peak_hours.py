@@ -1,5 +1,7 @@
 # 파일명: analyze_peak_hours.py
 # 실행위치: C:\dev\agent\
+# 필요 파일: 더미데이터2000명\dummy_data_2000_participations.csv
+# 목적: 가장 인기 있는 시간대를 분석하고 선 그래프로 시각화
 
 import pandas as pd
 import matplotlib.pyplot as plt

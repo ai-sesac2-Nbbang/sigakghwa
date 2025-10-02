@@ -1,6 +1,7 @@
 # 파일명: analyze_household_preference.py
 # 실행위치: C:\dev\agent\
 # 필요 파일: 더미데이터2000명\dummy_data_2000_users.csv, 더미데이터2000명\dummy_data_2000_posts.csv, 더미데이터2000명\dummy_data_2000_participations.csv
+# 목적: 가구원 수별 선호 카테고리를 분석하고 누적 막대그래프로 시각화
 
 import pandas as pd
 import matplotlib.pyplot as plt

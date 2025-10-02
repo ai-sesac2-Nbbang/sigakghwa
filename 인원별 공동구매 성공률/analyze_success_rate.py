@@ -1,6 +1,7 @@
 # 파일명: analyze_success_rate.py
 # 실행위치: C:\dev\agent\
 # 필요 파일: dummy_data_200_posts.csv
+# 목적: 모집 인원별 성공률을 분석하고 박스 플롯으로 시각화
 
 import pandas as pd
 import matplotlib.pyplot as plt

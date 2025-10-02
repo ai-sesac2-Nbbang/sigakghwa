@@ -1,6 +1,7 @@
 # 파일명: analyze_category_popularity.py
 # 실행위치: C:\dev\agent\
 # 필요 파일: dummy_data_200_posts.csv, 더미데이터2000명\dummy_data_2000_participations.csv
+# 목적: 전체 카테고리별 인기도를 분석하고 원그래프로 시각화
 
 import pandas as pd
 import matplotlib.pyplot as plt
