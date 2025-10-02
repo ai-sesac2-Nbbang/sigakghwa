@@ -28,8 +28,8 @@ def find_and_visualize_power_users():
     # --- 💾 2. 데이터 불러오기 ---
     print(f"💾 STEP 2: Loading data from '{os.getcwd()}'...")
     try:
-        df_users = pd.read_csv('dummy_data_2000_users.csv')
-        df_participations = pd.read_csv('dummy_data_2000_participations.csv')
+        df_users = pd.read_csv('더미데이터2000명\dummy_data_2000_users.csv')
+        df_participations = pd.read_csv('더미데이터2000명\dummy_data_2000_participations.csv')
     except FileNotFoundError as e:
         print(f"❌ ERROR: 필수 파일({e.filename})을 찾을 수 없습니다.")
         print("    먼저 데이터 생성 코드를 실행하여 데이터 파일을 생성했는지 확인해주세요.")
@@ -42,7 +42,7 @@ def find_and_visualize_power_users():
     top_10_users = participation_counts.head(10)
     top_10_details = pd.merge(top_10_users, df_users, left_on='user_id', right_on='id')
 
-    print("\n--- 👑 핵심 사용자(Power User) TOP 10 ---")
+    print("\n---  핵심 사용자(Power User) TOP 10 ---")
     print(top_10_details[['nickname', 'name', 'participation_count']].to_string(index=False))
 
     # --- 🎨 4. 시각화 ---
@@ -57,7 +57,7 @@ def find_and_visualize_power_users():
         orient='h'
     )
     
-    plt.title('👑 우리 서비스의 핵심 사용자 TOP 10', fontsize=18, pad=15)
+    plt.title('우리 서비스의 핵심 사용자 TOP 10', fontsize=18, pad=15)
     plt.xlabel('총 참여 횟수', fontsize=12)
     plt.ylabel('닉네임', fontsize=12)
     plt.grid(axis='x', linestyle='--', alpha=0.6)

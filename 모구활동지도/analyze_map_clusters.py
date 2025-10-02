@@ -16,9 +16,9 @@ def analyze_activity_clusters_map():
     # --- 💾 1. 데이터 불러오기 및 처리 ---
     print("💾 STEP 1: Loading and processing data...")
     try:
-        df_posts = pd.read_csv('dummy_data_2000_posts.csv')
+        df_posts = pd.read_csv('더미데이터2000명\dummy_data_2000_posts.csv')
     except FileNotFoundError:
-        print("❌ ERROR: 'dummy_data_2000_posts.csv' 파일을 찾을 수 없습니다.")
+        print("❌ ERROR: '더미데이터2000명\dummy_data_2000_posts.csv' 파일을 찾을 수 없습니다.")
         return
 
     if 'mogu_market' not in df_posts.columns:

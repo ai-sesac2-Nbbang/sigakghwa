@@ -28,8 +28,8 @@ def analyze_price_range_popularity():
     # --- 💾 2. 데이터 불러오기 ---
     print(f"💾 STEP 2: Loading data from '{os.getcwd()}'...")
     try:
-        df_posts = pd.read_csv('dummy_data_2000_posts.csv')
-        df_participations = pd.read_csv('dummy_data_2000_participations.csv')
+        df_posts = pd.read_csv('더미데이터2000명\dummy_data_2000_posts.csv')
+        df_participations = pd.read_csv('더미데이터2000명\dummy_data_2000_participations.csv')
     except FileNotFoundError as e:
         print(f"❌ ERROR: 필수 파일({e.filename})을 찾을 수 없습니다.")
         print("    먼저 데이터 생성 코드를 실행하여 데이터 파일을 생성했는지 확인해주세요.")
@@ -41,7 +41,7 @@ def analyze_price_range_popularity():
     # 참여 데이터와 게시글 데이터를 합쳐, 각 참여가 어떤 가격의 상품에서 발생했는지 연결
     merged_df = pd.merge(df_participations, df_posts, left_on='mogu_post_id', right_on='id')
 
-    print("\n--- 📊 참여가 발생한 상품들의 가격 통계 ---")
+    print("\n--- 참여가 발생한 상품들의 가격 통계 ---")
     # describe() 함수로 간단한 기술 통계 출력
     print(merged_df['price'].describe().apply(lambda x: f"{x:,.0f}"))
 
@@ -60,7 +60,7 @@ def analyze_price_range_popularity():
         color='skyblue'
     )
 
-    plt.title('💰 참여가 가장 활발한 가격대 분석', fontsize=18, pad=15)
+    plt.title(' 참여가 가장 활발한 가격대 분석', fontsize=18, pad=15)
     plt.xlabel('상품 가격 (원)', fontsize=12)
     plt.ylabel('총 참여 횟수', fontsize=12)
     

@@ -1,6 +1,6 @@
 # 파일명: analyze_category_popularity.py
 # 실행위치: C:\dev\agent\
-# 필요 파일: dummy_data_200_posts.csv, dummy_data_2000_participations.csv
+# 필요 파일: dummy_data_200_posts.csv, 더미데이터2000명\dummy_data_2000_participations.csv
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -28,8 +28,8 @@ def analyze_overall_category_popularity():
     # --- 💾 2. 데이터 불러오기 ---
     print(f"💾 STEP 2: Loading data from '{os.getcwd()}'...")
     try:
-        df_posts = pd.read_csv('dummy_data_2000_posts.csv')
-        df_participations = pd.read_csv('dummy_data_2000_participations.csv')
+        df_posts = pd.read_csv('더미데이터2000명\dummy_data_2000_posts.csv')
+        df_participations = pd.read_csv('더미데이터2000명\dummy_data_2000_participations.csv')
     except FileNotFoundError as e:
         print(f"❌ ERROR: 필수 파일({e.filename})을 찾을 수 없습니다.")
         print("    먼저 데이터 생성 코드를 실행하여 데이터 파일을 생성했는지 확인해주세요.")

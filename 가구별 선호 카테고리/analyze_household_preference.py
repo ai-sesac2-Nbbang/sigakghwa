@@ -1,6 +1,6 @@
 # 파일명: analyze_household_preference.py
 # 실행위치: C:\dev\agent\
-# 필요 파일: dummy_data_2000_users.csv, dummy_data_2000_posts.csv, dummy_data_2000_participations.csv
+# 필요 파일: 더미데이터2000명\dummy_data_2000_users.csv, 더미데이터2000명\dummy_data_2000_posts.csv, 더미데이터2000명\dummy_data_2000_participations.csv
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -29,9 +29,9 @@ def analyze_category_preference_by_household():
     print(f"💾 STEP 2: Loading 2000-user data from '{os.getcwd()}'...")
     try:
         # ✨ 2000명 규모의 데이터를 사용합니다 ✨
-        df_users = pd.read_csv('dummy_data_2000_users.csv')
-        df_posts = pd.read_csv('dummy_data_2000_posts.csv')
-        df_participations = pd.read_csv('dummy_data_2000_participations.csv')
+        df_users = pd.read_csv('더미데이터2000명\dummy_data_2000_users.csv')
+        df_posts = pd.read_csv('더미데이터2000명\dummy_data_2000_posts.csv')
+        df_participations = pd.read_csv('더미데이터2000명\dummy_data_2000_participations.csv')
     except FileNotFoundError as e:
         print(f"❌ ERROR: 필수 파일({e.filename})을 찾을 수 없습니다.")
         print("    먼저 '인원수 조절 가능' 마스터 데이터 생성 코드를 2000명으로 설정하고 실행했는지 확인해주세요.")
@@ -50,7 +50,7 @@ def analyze_category_preference_by_household():
     # 각 그룹 내에서의 카테고리 비율(%) 계산
     household_category_percentage = household_category_counts.div(household_category_counts.sum(axis=1), axis=0) * 100
     
-    print("\n--- 📊 가구원 수별 선호 카테고리 분포 (%) ---")
+    print("\n---  가구원 수별 카테고리 분포 (%) ---")
     print(household_category_percentage.round(1))
 
     # --- 🎨 4. 시각화 (누적 막대그래프) ---
@@ -64,7 +64,7 @@ def analyze_category_preference_by_household():
         width=0.7
     )
 
-    plt.title('👨‍👩‍👧‍👦 가구원 수별 선호 카테고리 분석', fontsize=18, pad=15)
+    plt.title(' 가구원 수별 선호 카테고리 분석', fontsize=18, pad=15)
     plt.xlabel('가구원 수', fontsize=12)
     plt.ylabel('카테고리 참여 비율 (%)', fontsize=12)
     plt.xticks(rotation=0)

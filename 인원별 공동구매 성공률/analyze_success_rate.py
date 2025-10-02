@@ -28,7 +28,7 @@ def analyze_success_rate_by_target_count():
     # --- 💾 2. 데이터 불러오기 ---
     print(f"💾 STEP 2: Loading data from '{os.getcwd()}'...")
     try:
-        df_posts = pd.read_csv('dummy_data_2000_posts.csv')
+        df_posts = pd.read_csv('더미데이터2000명\dummy_data_2000_posts.csv')
     except FileNotFoundError as e:
         print(f"❌ ERROR: 필수 파일({e.filename})을 찾을 수 없습니다.")
         print("    먼저 데이터 생성 코드를 실행하여 데이터 파일을 생성했는지 확인해주세요.")
@@ -58,7 +58,7 @@ def analyze_success_rate_by_target_count():
         palette='pastel'
     )
 
-    plt.title('🎯 모집 인원별 공동구매 성공률 분포', fontsize=18, pad=15)
+    plt.title(' 모집 인원별 공동구매 성공률 분포', fontsize=18, pad=15)
     plt.xlabel('목표 인원 수 (명)', fontsize=12)
     plt.ylabel('성공률 (%)', fontsize=12)
     

@@ -15,21 +15,21 @@ def analyze_peak_participation_hours():
         print("⚠️ 경고: 한글 폰트를 찾을 수 없습니다.")
 
     try:
-        df_participations = pd.read_csv('dummy_data_2000_participations.csv')
+        df_participations = pd.read_csv('더미데이터2000명\dummy_data_2000_participations.csv')
     except FileNotFoundError:
-        print("❌ ERROR: 'dummy_data_2000_participations.csv' 파일을 찾을 수 없습니다.")
+        print("❌ ERROR: '더미데이터2000명\dummy_data_2000_participations.csv' 파일을 찾을 수 없습니다.")
         return
 
     df_participations['applied_at'] = pd.to_datetime(df_participations['applied_at'])
     df_participations['hour_of_day'] = df_participations['applied_at'].dt.hour
     hourly_counts = df_participations['hour_of_day'].value_counts().sort_index()
 
-    print("\n--- 📊 시간대별 참여 횟수 ---")
+    print("\n---  시간대별 참여 횟수 ---")
     print(hourly_counts)
 
     plt.figure(figsize=(15, 7))
     sns.lineplot(x=hourly_counts.index, y=hourly_counts.values, marker='o', color='dodgerblue')
-    plt.title('📈 시간대별 참여 활성도 분석 (24시간)', fontsize=18, pad=15)
+    plt.title(' 참여가 가장 활발한 시간대 (24시간)', fontsize=18, pad=15)
     plt.xlabel('시간대', fontsize=12)
     plt.ylabel('총 참여 횟수', fontsize=12)
     plt.xticks(range(24))

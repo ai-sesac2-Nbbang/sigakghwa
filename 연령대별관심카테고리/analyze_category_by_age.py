@@ -28,10 +28,10 @@ def analyze_category_preference_by_age():
     # --- 💾 2. 데이터 불러오기 ---
     print(f"💾 STEP 2: Loading data from '{os.getcwd()}'...")
     try:
-        df_users = pd.read_csv('dummy_data_2000_users.csv')
+        df_users = pd.read_csv('더미데이터2000명\dummy_data_2000_users.csv')
     except FileNotFoundError as e:
         print(f"❌ ERROR: 필수 파일({e.filename})을 찾을 수 없습니다.")
-        print("    먼저 데이터 생성 코드를 실행하여 'dummy_data_2000_users.csv' 파일을 생성했는지 확인해주세요.")
+        print("    먼저 데이터 생성 코드를 실행하여 '더미데이터2000명\dummy_data_2000_users.csv' 파일을 생성했는지 확인해주세요.")
         return
 
     # --- 📊 3. 데이터 전처리 및 분석 ---
