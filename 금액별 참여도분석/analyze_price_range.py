@@ -1,6 +1,7 @@
 # 파일명: analyze_price_range.py
 # 실행위치: C:\dev\agent\
 # 필요 파일: dummy_data_200_posts.csv, dummy_data_200_participations.csv
+# 목적: 참여가 활발한 가격대를 분석하고 히스토그램으로 시각화
 
 import pandas as pd
 import matplotlib.pyplot as plt
